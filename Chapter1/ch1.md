@@ -37,9 +37,40 @@
 
 ### Software
 
+軟體造成的錯誤與硬體不同，硬體的錯誤具有隨機性並且不會產生連鎖效應，但是軟體卻完全相反，單一節點的錯誤可能串連造成系統性錯誤，以下有幾個常見例子。
 
+- 輸入錯誤
+  - Linux System leap second on June 30, 2012 [Link](https://www.somebits.com/weblog/tech/bad/leap-second-2012.html)
+- 硬體資源耗盡
+  - 為常見的Memory Leak
+  - Internet Bandwidth
+- 系統所依賴的其他系統
+  - API no response
+- 連鎖錯誤
+
+避免軟體的錯誤需要從細節做起，統整幾個常見方式。
+
+- Testing
+  - Unit test
+  - Integration test
+- 隔離程式且模組化程式
+- Restart or reboot stragty
+- Monitoring
 
 ### Human
+
+人為錯誤往往是造成問題的最大原因，需要組合多樣的方式來防範與增進系統，底下列舉了幾個常見的方式。
+
+- 最小化犯錯機會
+  - 改善後台系統、API設計、等等...，最好的系統並不是最細節最多的，越是多餘複雜的系統反而可能造增人為的忽略偷工減料，找到最佳的平衡才是最重要的。
+- Testing
+  - Unit test
+  - Integration test
+- Rollback
+- Monitoring
+- Traning
+
+仔細看可以發現，上述的所有方式，無一例外地出現在現代CICD的概念中，測試、回版、監控、等...，都是相當重要的步驟。
 
 
 
